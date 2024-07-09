@@ -29,10 +29,7 @@ jobs:
       app_data: ${{ steps.prepare.outputs.app_data }}
       app_vendor: ${{ steps.prepare.outputs.app_vendor }}
       do_publish: ${{ steps.prepare.outputs.do_publish }}
-    steps:
-      - name: Download a Build Artifact
-      - uses: actions/download-artifact@v4.1.8
-            
+    steps:  
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
